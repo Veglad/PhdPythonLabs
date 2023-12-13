@@ -1,1 +1,2 @@
 parameterized~=0.9.0
+pandas~=2.1.3

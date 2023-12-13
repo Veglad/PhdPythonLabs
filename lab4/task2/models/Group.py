@@ -1,6 +1,6 @@
 from typing import List
 
-from Student import Student
+from lab4.task2.models.Student import Student
 
 
 class Group:
@@ -24,3 +24,13 @@ class Group:
     @students.setter
     def students(self, value):
         self._students = value
+
+    def __str__(self):
+        students_text = "\n".join(map(lambda it: it.full_name(), self.students))
+        return """
+----------Group--------------
+Number - {}
+-- Students --
+{}
+------------------------------
+        """.format(self.number, students_text)

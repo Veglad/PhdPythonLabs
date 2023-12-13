@@ -28,3 +28,12 @@ class Subject:
     @semester.setter
     def semester(self, value):
         self._semester = value
+
+    def __str__(self):
+        return """
+----------Subject-------------
+Name - {}
+Credits - {}
+Semester - {}
+------------------------------
+        """.format(self.name, self.credits, self.semester)

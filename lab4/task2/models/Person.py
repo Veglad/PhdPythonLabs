@@ -1,18 +1,10 @@
-from typing import List
+class Person:
 
-from Subject import Subject
-
-
-class Lecturer:
-
-    def __init__(self, first_name: str, last_name: str, middle_name: str, birth_year: int, experience: float,
-                 subjects: List[Subject]):
+    def __init__(self, first_name: str, last_name: str, middle_name: str, birth_year: int):
         self._first_name = first_name
         self._last_name = last_name
         self._middle_name = middle_name
         self._birth_year = birth_year
-        self._experience = experience
-        self._subjects = subjects
 
     @property
     def first_name(self):
@@ -46,20 +38,5 @@ class Lecturer:
     def birth_year(self, value):
         self._birth_year = value
 
-    @property
-    def experience(self):
-        return self._experience
-
-    @experience.setter
-    def experience(self, value):
-        self._experience = value
-
-    @property
-    def subjects(self):
-        return self._subjects
-
-    @subjects.setter
-    def subjects(self, value):
-        self._subjects = value
-
-    def total_subject
+    def full_name(self):
+        return "{} {} {}".format(self._last_name, self._first_name, self._middle_name)
